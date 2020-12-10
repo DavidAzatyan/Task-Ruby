@@ -1,0 +1,23 @@
+<h1>Answers#new</h1>
+<%= form_for :answer, url: answers_path do |f| %>
+	<p>
+		code<br>
+		<%= f.text_field :code %>
+	</p>
+
+	<p>
+		answer<br>
+		<%= f.text_area :answer %>
+	</p>
+
+	<p>
+		trueOrFalse<br>
+		<%= f.text_field :truefalse %>
+	</p>
+
+
+	<p>
+		<%= f.submit("ADD Answer") %>
+	</p>
+
+	<% end %>

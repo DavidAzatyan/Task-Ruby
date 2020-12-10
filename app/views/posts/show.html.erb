@@ -1,0 +1,36 @@
+<p>code: <%= @post.code %></p>
+<p>question: <%= @post.question %></p>
+<p>status: <%= @post.status %></p>
+<p>bal: <%= @post.bal %></p>
+
+<%= link_to "Edit question", edit_post_path(@post), :class => 'btn btn-warning' %>
+<hr>
+	<% @post.answers.each do |answer| %>
+		<p>code: <%= answer.fCODE %></p>
+		<p>answer: <%= answer.fANSWER %></p>
+		<p>trueOrFalse: <%= answer.fTRUEFALSE %></p>
+	<% end %>
+</hr>
+<h1>Answers#new</h1>
+<%= form_for ([@post, @post.answers.build])do |f| %>
+	<p>
+		code<br>
+		<%= f.text_field :fCODE %>
+	</p>
+
+	<p>
+		answer<br>
+		<%= f.text_area :fANSWER %>
+	</p>
+
+	<p>
+		trueOrFalse<br>
+		<%= f.text_field :fTRUEFALSE %>
+	</p>
+
+
+	<p>
+		<%= f.submit("ADD Answer") %>
+	</p>
+
+	<% end %>

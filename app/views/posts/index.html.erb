@@ -1,0 +1,29 @@
+<% begin %>
+<%= @arr %>
+<% @post.each do |p| %>
+	<!-- <p><%= p.code %></p> -->
+	<p><%= p.question %></p>
+
+	<!-- <p><%= p.status %></p> -->
+	<!-- <p><%= p.bal %></p> -->
+	<% @answer.each do |answer| %>
+	<% if answer.fTRUEFALSE == 0 %>
+	<%= link_to answer.fANSWER, posts_path, data: { confirm: "your answer is false, your score is 0" } %>
+	<br><br>
+	<% else %>
+		<%= link_to answer.fANSWER, posts_path, data: { confirm: "your answer is true, your score is #{p.bal}" } %>
+		<br><br>
+		<% end %>
+	<% end %>
+
+<% end %>
+
+<%= link_to "Next Question>>", posts_path,:class =>'btn btn-warning' %>
+<% rescue => e%>
+    game end<br><br>
+<% end %>
+
+
+
+
+

@@ -1,0 +1,27 @@
+<h1>new#Question</h1>
+<%= form_for :post, url: posts_path do |f| %>
+	<p>
+		code<br>
+		<%= f.text_field :code %>
+	</p>
+
+	<p>
+		question<br>
+		<%= f.text_area :question %>
+	</p>
+
+	<p>
+		status<br>
+		<%= f.text_field :status %>
+	</p>
+
+	<p>
+		point<br>
+		<%= f.text_field :bal %>
+	</p>
+
+	<p>
+		<%= f.submit("ADD QUESTION") %>
+	</p>
+
+	<% end %>

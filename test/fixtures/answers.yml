@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fCODE: 1
+  fANSWER: MyString
+  fTRUEFALSE: 1
+  post: one
+
+two:
+  fCODE: 1
+  fANSWER: MyString
+  fTRUEFALSE: 1
+  post: two
